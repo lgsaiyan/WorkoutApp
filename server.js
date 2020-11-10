@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
@@ -12,8 +12,9 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port);
+*/
 
-/*
+
 var path = require('path');
 var express = require('express');
 
@@ -24,4 +25,4 @@ app.set('port', process.env.PORT || 8080);
 
 var server = app.listen(app.get('port'), function() {
   console.log('listening on port ', server.address().port);
-});*/
+});

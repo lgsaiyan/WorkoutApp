@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
     "start-dev": "npm run build",
-    "heroku-postbuild": "webpack -p" 
+    "heroku-postbuild": "webpack -p && node server.js" 
   },
   "author": "Levon Saiyan",
   "license": "ISC",

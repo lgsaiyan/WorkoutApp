@@ -158,7 +158,7 @@ export default class List {
                 // Update Model
                 totalTime += - 1;
                 formattedTime = fmtMSS(totalTime);      
-                //provide IF statement for determining exercise name and duration
+
                 if ((currentExDur === 1) && (i < (array.exercises.length -1))){
                   i += 1; //updates exercise in model
                   currentEx = array.exercises[i].name;
@@ -167,7 +167,7 @@ export default class List {
                   // play sound for new exercise
                   beep.play();
                   
-                  // read new exercise (add timeout to 1s???)
+                  // read new exercise
                   setTimeout(getVoice(currentEx), 1000);
 
 
@@ -188,7 +188,6 @@ export default class List {
                 counter++
                 if(counter === array.totalDuration){
                   clearInterval(interval);
-                  //this.inPlay = 0; // NOT working, so used returner function below...
                   returner();
                   const deleteBtns = () => {
                     const render =  document.querySelector('.controls');
@@ -216,33 +215,3 @@ export default class List {
       if(storage) this.workouts = storage;
     }
 };
-
-
-
-
-/** EXAMPLE ARRAY SPLICE FOR DELETE FUNCTION
- * 
- * const a = {
-  name: "a",
-  id: 1
-}
-
-const b = {
-  name: "b",
-  id: 2
-}
-
-const c = {
-  name: "c",
-  id: 3
-}
-
-
-const workouts = [a,b,c]
-
-const id = 1;
-        const index = workouts.findIndex(el => el.id === id);  
-        console.log(index)
-        workouts.splice(index, 1);
-        console.log(workouts)
- */
